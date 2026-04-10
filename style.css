@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(220, 219, 219);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#corpo{
+    background-color: white;
+    padding: 20px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#forms{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+#forms input[type="email"],
+#forms input[type="password"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.2s;
+    width: 300px;
+}
+
+#forms input:focus{
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+input[type="checkbox"]{
+    accent-color: #4CAF50;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#forms a{
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#forms a:hover{
+    color: #1a4c1c;
+}
+
+#forms button{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#forms button:hover{
+    background-color: #43a047;
+}
