@@ -8,19 +8,25 @@
 /* CORPO */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #00b09b, #96c93d);height: 100vh;
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+
+    min-height: 100vh; /* corrigido */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 15px; /* evita colar nas bordas no celular */
 }
 
 /* CAIXA PRINCIPAL */
 #corpo {
     background: #fff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
-    width: 90%;
-    max-width: 320px;
+
+    width: 100%;          /* importante */
+    max-width: 350px;     /* limita no PC */
+
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
@@ -41,14 +47,16 @@ input {
     width: 100%;
     padding: 12px;
     margin-bottom: 12px;
+
     border: 1px solid #ccc;
     border-radius: 10px;
+
     outline: none;
     transition: 0.3s;
 }
 
 input:focus {
-     border-color: #28a745;
+    border-color: #28a745;
     box-shadow: 0 0 5px #28a745;
 }
 
@@ -69,45 +77,65 @@ input:focus {
 .links {
     display: flex;
     justify-content: space-between;
+    gap: 10px; /* melhora no celular */
     margin-bottom: 15px;
 }
 
 .links a {
     text-decoration: none;
-      color: #28a745;
-    font-size: 14px;
-}
-
-.links a:hover {
-    text-decoration: underline;
+    color: #28a745;
+    font-size: 13px; /* reduz pra caber melhor */
 }
 
 /* BOTÃO */
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+
     background: #28a745;
     border: none;
     border-radius: 8px;
+
     color: white;
     font-size: 16px;
+
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
     background: #218838;
-    transform: scale(1.03);
 }
 
 /* LINK VOLTAR */
 a {
     display: inline-block;
     margin-top: 15px;
-   color: #28a745;
+    color: #28a745;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* 📱 AJUSTES FINOS PRO CELULAR */
+@media (max-width: 480px) {
+
+    #corpo {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .links {
+        flex-direction: column; /* evita quebrar feio */
+        align-items: center;
+    }
+
+    .links a {
+        font-size: 14px;
+    }
 }
