@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div id="corpo">
         <h1>Login</h1>
-        
+
         <form method="POST">
             <div id="forms">
-                <input type="email" name="email" placeholder="Email"><br>
-                <input type="password" name="senha" placeholder="Senha"><br>
-                <label class="checkbox">
+                
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="senha" placeholder="Senha" required>
 
-                <input type="checkbox" name="confirmar"> Salvar senha
-                </label><br>
+                <label class="checkbox">
+                    <input type="checkbox" id="confirmar" name="confirmar">
+                    Salvar senha
+                </label>
 
                 <div class="links">
-                    <a href="Recuperar_Senha">Recuperar Senha</a>
-                    <a href="Criar_Cadastro">Cadastrar-se</a>
+                    <a href="recuperar_senha.html">Recuperar Senha</a>
+                    <a href="cadastro.html">Cadastrar-se</a>
                 </div>
-                <br>
 
                 <button type="submit">Entrar</button>
+
             </div>
         </form>
-
     </div>
+
 </body>
 </html>
