@@ -5,21 +5,38 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="corpo">
         <h1>Criar Conta</h1>
 
-        <form>
+        <form id="formCadastro">
+
             <input type="text" placeholder="Nome" required>
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Senha" required>
 
             <button type="submit">Cadastrar</button>
+
         </form>
 
         <a href="index.html">Voltar para Login</a>
     </div>
+
+    <script>
+        const formCadastro = document.getElementById("formCadastro");
+
+        formCadastro.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert("Cadastro realizado com sucesso!");
+
+            window.location.href = "index.html";
+
+        });
+    </script>
 
 </body>
 </html>
