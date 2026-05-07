@@ -8,19 +8,23 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="corpo">
+
         <h1>Login</h1>
 
-        <form method="POST">
+        <form id="loginForm">
+
             <div id="forms">
-                
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="senha" placeholder="Senha" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="password" id="senha" placeholder="Senha" required>
 
                 <label class="checkbox">
-                    <input type="checkbox" id="confirmar" name="confirmar">
+                    <input type="checkbox" id="confirmar">
                     Salvar senha
                 </label>
 
@@ -31,9 +35,18 @@
 
                 <button type="submit">Entrar</button>
 
+                <div class="mensagem" id="mensagem">
+                    Login realizado com sucesso!
+                </div>
+
             </div>
+
         </form>
+
     </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
 
 </body>
 </html>
